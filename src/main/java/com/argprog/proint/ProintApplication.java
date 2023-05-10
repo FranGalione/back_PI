@@ -1,5 +1,6 @@
 package com.argprog.proint;
 
+import java.util.Arrays;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +10,6 @@ import org.springframework.web.filter.CorsFilter;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.Arrays;
 
 @SpringBootApplication
 public class ProintApplication {
@@ -17,8 +17,8 @@ public class ProintApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ProintApplication.class, args);
 	}
-
-	@Bean
+        
+        	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 
@@ -44,4 +44,5 @@ public class ProintApplication {
 		UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
 		urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
 		return new CorsFilter(urlBasedCorsConfigurationSource);	}
+
 }
