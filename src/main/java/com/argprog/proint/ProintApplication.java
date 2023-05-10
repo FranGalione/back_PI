@@ -18,7 +18,7 @@ public class ProintApplication {
 		SpringApplication.run(ProintApplication.class, args);
 	}
         
-        	@Bean
+
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 
